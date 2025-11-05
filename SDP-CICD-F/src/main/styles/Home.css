@@ -1,0 +1,248 @@
+/* ====== Global Reset ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #4f46e5; /* Indigo */
+  --background-color: #ffffff;
+  --text-color: #2e3440;
+  --accent-color: #000000;
+  --hover-color: #4338ca;
+  --border-radius: 10px;
+  --transition: all 0.3s ease-in-out;
+  --section-bg: #f1f5f9;
+  --input-bg: #ffffff;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  line-height: 1.6;
+}
+
+/* ====== Hero Section ====== */
+.hero {
+  text-align: center;
+  padding: 100px 60px;
+  background: var(--section-bg);
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.hero-btn:hover {
+  background-color: var(--hover-color);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.dark-mode-btn:hover {
+  background-color: var(--hover-color);
+}
+
+/* ====== Features Section ====== */
+.features {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.features h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.features ul {
+  list-style: none;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.features li {
+  margin: 12px 0;
+  font-size: 1.1rem;
+}
+
+/* ====== How It Works Section ====== */
+#how-it-works {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--section-bg);
+}
+
+#how-it-works h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#how-it-works ol {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+/* ====== Testimonials Section ====== */
+#testimonials {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+blockquote {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--hover-color);
+  margin: 20px 0;
+}
+
+cite {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* ====== Description Section ====== */
+#description {
+  background-color: var(--section-bg);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#description p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+/* ====== Contact Section ====== */
+#contact {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-container h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact-container p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.contact-container input[type="text"] {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* ====== Dark Mode ====== */
+.dark-mode {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --primary-color: #0f9d58;
+  --hover-color: #db4437;
+  --section-bg: #1e1e1e;
+  --input-bg: #2e2e2e;
+}
+
+.dark-mode body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.dark-mode .hero,
+.dark-mode #how-it-works,
+.dark-mode #description,
+.dark-mode #contact {
+  background-color: var(--section-bg);
+}
+
+.dark-mode .hero-btn,
+.dark-mode .dark-mode-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.dark-mode .hero-btn:hover,
+.dark-mode .dark-mode-btn:hover {
+  background-color: var(--hover-color);
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  #how-it-works ol {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+  blockquote {
+    font-size: 1.1rem;
+  }
+}
